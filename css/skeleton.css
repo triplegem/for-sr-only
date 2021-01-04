@@ -439,6 +439,7 @@ there.
   padding-bottom:56.25%;
   position:relative;
   height:0;
+  margin-bottom:25px;
 }
 .video-responsive iframe{
   left:0;
