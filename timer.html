@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Screen reader solution video demonstration</title>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Lato:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container portfolio">
+
+    <main class="row">
+      <div class="two-thirds column">        
+        <div class="timer" onload="timer(1800)">
+          <div>Unfortunately, no one is able to help you right now.</div>
+          <div class="time">
+            <strong>Please wait: <span id="time">Loading...</span></strong>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    var time = 10 * 60;
+    setInterval(function() {
+      var seconds = time % 60;
+      var minutes = (time - seconds) / 60;
+      if (seconds.toString().length == 1) {
+        seconds = "0" + seconds;
+      }
+      if (minutes.toString().length == 1) {
+        minutes = "0" + minutes;
+      }
+      document.getElementById("time").innerHTML = minutes + ":" + seconds;
+      time--;
+      if (time == 0) {
+        window.location.href = "screen-reader.html";
+      }
+    }, 1000);
+    </script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
+
