@@ -1,1 +1,9 @@
 # for-sr-only
+
+I created this demonstration to help people who are able to see develop a sense of how obstructive an inaccessible website can be for a person who is blind.
+
+In this example, I present an image with text that is visually readable. The problem is that the information in the image is both incomplete and outdated. This is a situation people who are blind who use screen readers or refreshable braille devices face when alternative text hasn't been updated or the alternative text inadequately describes the image.
+
+I also display streams of incoherent text that are obstructive and meaningless. A user who can see is unable to access the correct information on the website. Savvy users can spend time inspecting the markup, but it will take far more time to put the content together than it would if the information were readily accessible. Screen reader users (who are blind) face similar situations, in which no matter how much time they spend attempting to find information, it isn't available to them for a variety of reasons, such as buttons activated only by mouse, inability to access a modal, dynamic information appearing at the top of the DOM after the user has passed that point and is unaware of the new content, long, unmeaningful image filenames, read in place of meaningful alternative text, etc.
+
+In addition to demonstrating how a screen reader user who is blind might hear inaccurate information, or not be able to access information at all, my intent is that people understand how much time the user must spend on this. If the user recognizes the site is inaccessible, they might try to find someone who can read the site to them. This takes even more time. For this reason, I've added a timer for 10 minutes to simulate the time it might take a user to find someone, wait for them to finish what they're doing, and come over to their workstation to read the site to them.
